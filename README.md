@@ -1,6 +1,4 @@
-# PCB-Fault-Detector
-
-
+# Circuit-Board-Fault-Defect-Detection-using-Image-Processing
 
 Introduction : 
 
@@ -84,8 +82,6 @@ application features as if they were implemented in Flask itself.
 
 Results:
 
-<img width="385" height="259" alt="image" src="https://github.com/user-attachments/assets/99255cdf-407a-4ced-b085-290fe1d20b42" />
+![image](https://github.com/dhrupad-u/PCB-Defect-Detection-using-Machine-Learning/assets/42469685/f19cf229-fd09-4833-921c-dee0999af2b1)
 
-
-<img width="310" height="336" alt="image" src="https://github.com/user-attachments/assets/cb38f619-953f-4bd7-8f16-6dd6828ead66" />
-
+![image](https://github.com/dhrupad-u/PCB-Defect-Detection-using-Machine-Learning/assets/42469685/4288b946-e2b0-45cb-a138-8b60aa4c5a79)

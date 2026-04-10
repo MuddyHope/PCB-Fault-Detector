@@ -1,0 +1,7 @@
+pip install opencv-python
+
+import cv2
+
+pip install tensorflow
+
+pip install google-colab
