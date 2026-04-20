@@ -1,21 +1,52 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
 
+## CONFIG
 
+from pathlib import Path
+import os
 import numpy as np
 from keras.models import load_model
 from keras.preprocessing import image
 
 
-# In[2]:
+
+
+# -------- AUTO BASE DIR (FIX FOR NOTEBOOK + SCRIPT) --------
+def get_base_dir():
+    # Jupyter notebook
+    if "ipykernel" in os.sys.modules:
+        base = Path.cwd()
+
+        # walk up until Dataset folder is found
+        while not (base / "Dataset").exists() and base != base.parent:
+            base = base.parent
+
+        return base
+
+    # normal python script
+    return Path(__file__).resolve().parent
+
+BASE_DIR = get_base_dir()
+
+
+# -------- CONFIG --------
+DATASET_DIR = BASE_DIR / "Dataset"
+
+TRAIN_DIR = DATASET_DIR / "train"
+TEST_DIR = DATASET_DIR / "test"
+
+MODEL_DIR = BASE_DIR
+
+MODEL_PATH = str(MODEL_DIR / "model.h5")
+
 
 
 # Load the model
-MODEL_PATH = "/Users/apple/Documents/CSUF/Spring 26/529/Circuit-Board-Fault-Detection-using-ML-main/model.h5"
 def get_model():
     global model
+    print(f"Path stored in {MODEL_PATH}")
     model = load_model(MODEL_PATH)
     print("Model Loaded Successfully")
 
