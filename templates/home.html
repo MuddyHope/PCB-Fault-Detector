@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <title>PCB Defect Detection</title>
+
+  <style>
+    body {
+      background: #f4f6f9;
+    }
+    .header {
+      background: linear-gradient(90deg, #4e73df, #224abe);
+      color: white;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn-upload {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+  <!-- Header -->
+  <div class="header text-center">
+    <h2>EGEE 529: Principles of Neural Systems</h2>
+    <h4>Project: Defect Detection in PCB</h4>
+    <p class="mb-0">Project by: Pancham and Prateek</p>
+  </div>
+
+  <!-- Upload Card -->
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card p-4">
+
+        <h5 class="text-center mb-4">Upload PCB Image</h5>
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+
+          <div class="form-group">
+            <input type="file" class="form-control-file" name="file" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-upload">
+            Upload & Predict
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

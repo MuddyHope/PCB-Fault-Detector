@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <title>PCB Defect Detection Result</title>
+
+  <style>
+    body {
+      background: #f4f6f9;
+    }
+
+    .header {
+      background: linear-gradient(90deg, #343a40, #007bff);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .result-card {
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      background: white;
+    }
+
+    .result-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .badge-result {
+      font-size: 18px;
+      padding: 10px 15px;
+    }
+
+    .center-align {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+  <!-- Header -->
+  <div class="header">
+    <h3>PCB Defect Detection System</h3>
+    <p class="mb-0">AI-based classification of circuit board defects</p>
+  </div>
+
+  <!-- Result Card -->
+  <div class="result-card">
+
+    <div class="row">
+
+      <!-- Image Section -->
+      <div class="col-md-6 center-align">
+        <h5 class="mb-3">Uploaded Image</h5>
+        <img src="{{ user_image }}" class="result-img img-thumbnail" alt="PCB Image">
+      </div>
+
+      <!-- Result Section -->
+      <div class="col-md-6 center-align">
+
+        <h5 class="mb-3">Prediction Result</h5>
+
+        {% if product.lower() == "defective" %}
+          <span class="badge badge-danger badge-result">
+            {{ product }}
+          </span>
+          <p class="mt-3 text-danger">⚠ Defect detected in PCB</p>
+        {% else %}
+          <span class="badge badge-success badge-result">
+            {{ product }}
+          </span>
+          <p class="mt-3 text-success">✔ PCB is clean</p>
+        {% endif %}
+
+        <a href="/" class="btn btn-primary mt-4">
+          Upload Another Image
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
