@@ -9,9 +9,9 @@ a very impressive accuracy rate has been achieved on the particular dataset it w
 Notebook to compile and execute the code.
 
 The entire project contains three major files:
-1. final_code.ipynb - Main code, to define and write code for the model
+1. main.ipynb - Main code, to define and write code for the model
 2. Prediction.ipynb - Prediction algorithm
-3. Flask.ipynb - - Web based micro-server application to host the model online
+3. server.ipynb - - Web based micro-server application to host the model online
    
 -------------------------------------------------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ Installions Required :
 
 The code :
 
-1. final_code.ipynb
+1. main.ipynb
    This code entitles the entire project, including the neural model used in the project and the training done for 
    the same. It generates a model and stores it. It also contains comments explaining each part of the code. 
 
@@ -37,7 +37,7 @@ The code :
    The file extracts the data from the already stored model, and uses this information to further process the 
    newly input data to predict if it is either a good or bad quality image.
 
-3. Flask.ipynb
+3. server.py
    Flask is a micro-server which is used to host a simple two webpage site on our local host computer. This file 
    contains the definition and deployement code for the server which runs the two html files which are stored in
    the templates folder in the project folder.
@@ -48,7 +48,7 @@ Folders in the project :
 
 1. Dataset :
    This folder consists of images from the database: https://github.com/tangsanli5201/DeepPCB
-   This is a free dataset availble online which contains around 1100 images of PCB classified as Good and Bad.
+   This is a free dataset availble online which contains around 2400 images of PCB classified as Good and Bad.
    The size of the images has been reduced from 640*640 to 224*224 pixels, to help decrease the computional resources
    needed to train the model. This was atained by an anti-aliasing method, which helps in reducing image quality
    without major loss. All of the images are in binary format, i.e black and white where the black part indicated 
